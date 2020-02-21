@@ -10,7 +10,7 @@ class Guardia_Real
 {
 	private:
 		string nombre;
-		int edad,ataque,defensa;
+		int tipo,edad,ataque,defensa;
 	public:
 		static const int Caballero=1;
 		static const int Jinete=2;
