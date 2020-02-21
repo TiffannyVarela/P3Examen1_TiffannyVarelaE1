@@ -334,22 +334,22 @@ Lannister* newLannister(){
 	return lannister;
 }
 
-/*Pequenia_Familia_Noble* newPFN(){
-	string nombre, simbolo, lema;
-	int ataque,defensa;
-	Pequenia_Familia_Noble* PFN;
+Guardia_Real* newGR(){
+	string nombre;
+	int edad, tipo,ataque,defensa;
+	Guardia_Real* GR;
 	cout<<"Nombre: "<<endl;
 	cin>>nombre;
-	cout<<"Simbolo: "<<endl;
-	cin>>simbolo;
-	cout<<"Lema: "<<endl;
-	cin>>lema;
+	cout<<"Edad: "<<endl;
+	cin>>edad;
+	cout<<"Tipo: "<<endl;
+	cin>>tipo;
 	cout<<"Ataque: "<<endl;
 	cin>>ataque;
 	cout<<"Defensa: "<<endl;
 	cin>>defensa;
-	PFN= new Pequenia_Familia_Noble(nombre,simbolo,lema,ataque,defensa);
-	return PFN;
+	GR= new Guardia_Real(nombre,edad,tipo,ataque,defensa);
+	return GR;
 }
 
 void readEjercitoLannister(Guardia_Real** array,int size,int pos){//inicio read array
@@ -364,10 +364,10 @@ void readEjercitoLannister(Guardia_Real** array,int size,int pos){//inicio read 
 	}
 }//fin read array
 
-Guardia_Real** inicializarStark(int size){//inicio inicializar
+Guardia_Real** inicializarLannister(int size){//inicio inicializar
 	Guardia_Real** retval = new Guardia_Real*[size];
 	return retval;
-}//fin inicializar*/
+}//fin inicializar
 
 //TARGARYEN
 
@@ -420,7 +420,7 @@ void readEjercitoTargaryen(Dragones** array,int size,int pos){//inicio read arra
 	}
 }//fin read array
 
-Dragones** inicializarTaegaryen(int size){//inicio inicializar
+Dragones** inicializarTargaryen(int size){//inicio inicializar
 	Dragones** retval = new Dragones*[size];
 	return retval;
 }//fin inicializar

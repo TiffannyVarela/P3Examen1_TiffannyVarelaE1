@@ -13,7 +13,7 @@ Guardia_Real::Guardia_Real(){
 
 Guardia_Real::Guardia_Real(string nombre, int tipo,int edad, int ataque, int defensa){
 	this -> nombre=nombre;
-	//this -> tipo=tipo;
+	this -> tipo=tipo;
 	this -> edad=edad;
 	this -> defensa=defensa;
 	this -> ataque=ataque;
