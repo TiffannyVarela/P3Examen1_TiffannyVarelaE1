@@ -343,13 +343,24 @@ Guardia_Real* newGR(){//edicion del tipo
 	cin>>nombre;
 	cout<<"Edad: "<<endl;
 	cin>>edad;
-	cout<<"Tipo: "<<endl;
-	cin>>tipo;
 	cout<<"Ataque: "<<endl;
 	cin>>ataque;
 	cout<<"Defensa: "<<endl;
 	cin>>defensa;
-	GR= new Guardia_Real(nombre,Guardia_Real,edad,ataque,defensa);
+	cout<<"Tipo\n 1.Caballero\n 2.Jinete\n 3.Arquero\n"<<endl;
+	cin>>tipo;
+	if (tipo==1)
+	{
+		GR= new Guardia_Real(nombre,Guardia_Real::Caballero,edad,ataque,defensa);
+	}
+	if (tipo==2)
+	{
+		GR= new Guardia_Real(nombre,Guardia_Real::Jinete,edad,ataque,defensa);
+	}
+	if (tipo==3)
+	{
+		GR= new Guardia_Real(nombre,Guardia_Real::Arquero,edad,ataque,defensa);
+	}
 	return GR;
 }
 
@@ -429,3 +440,59 @@ Dragones** inicializarTargaryen(int size){//inicio inicializar
 }//fin inicializar
 
 //SIMULACION
+
+void Simulacion(Pequenia_Familia_Noble** stark, Guardia_Real** lannister, Dragones** targaryen, int cont_PFN, int cont_GR, int cont_DRAG){
+	int opc1, opc2;
+	int s=0,l=0,t=0;
+	int 
+	cout<<"Elija la Primera Familia: ";
+	opc1=menuFamilias();
+	if (opc1==1 && cont_PFN!=0)
+	{
+		s=1;
+	}
+	if (opc1==2 && cont_GR!=0)
+	{
+		l=1;
+	}
+	if (opc1==3 && cont_DRAG!=0)
+	{
+		t=1;
+	}
+	else{
+		cout<<"Casa no creada o sin ejercito"<<endl;
+	}
+	cout<<"Elija la Segunda Familia: ";
+	opc2=menuFamilias();
+
+	if (opc2==1 && s==1 || cont_PFN==0)
+	{
+		cout<<"Opcion ya usada o casa sin ejercito"<<endl;
+	}
+
+	if (opc2==2 && l==1 || cont_GR==0)
+	{
+		cout<<"Opcion ya usada o casa sin ejercito"<<endl;
+	}
+
+	if (opc2==3 && t==1 || cont_DRAG==0)
+	{
+		cout<<"Opcion ya usada o casa sin ejercito"<<endl;
+	}
+	else{
+		cout<<"Iniciando"<<endl;
+		if (s==1 && l==1)
+		{
+			/* code */
+		}
+		if (s==1 && t==1)
+		{
+			/* code */
+		}
+		if (t==1 && l==1)
+		{
+			/* code */
+		}
+	}
+
+}
