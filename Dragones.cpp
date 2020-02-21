@@ -30,7 +30,7 @@ string Dragones::toString(){
 		cout<<"Nombre: "<<nombre<<endl
 		<<"Color: "<<color<<endl
 		<<"Tamanio: "<<tamanio<<endl
-		<<"Distancia de Fuego: "<<tamanio<<endl
+		<<"Distancia de Fuego: "<<distancia_fuego<<endl
 		<<"Ataque: "<<ataque<<endl
 		<<"Defensa: "<<defensa<<endl;
 	}

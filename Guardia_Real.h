@@ -9,10 +9,10 @@ using namespace std;
 class Guardia_Real
 {
 	private:
-		string nombre;
+		string nombre,tipo;
 		int edad,ataque,defensa;
 	public:
-
+		static const int tipo();
 		Guardia_Real();
 		~Guardia_Real();
 	
