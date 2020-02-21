@@ -47,9 +47,9 @@ int main(int argc, char const *argv[])
 	Guardia_Real** ejercitoLannister=inicializarLannister(10);
 
 	//TARGARYEN
-	Taegaryen* taegaryen;
+	Targaryen* targaryen;
 	Dragones* DRAG;
-	Dragones** ejercitoTaegaryen=inicializarTaegaryen(10);
+	Dragones** ejercitoTargaryen=inicializarTargaryen(10);
 
 	do
 	{
@@ -91,8 +91,8 @@ int main(int argc, char const *argv[])
 									cout<<"Familia Ya Creada"<<endl;
 								}
 								else{
-									taegaryen=newTargaryen();
-									taegaryen->toString();
+									targaryen=newTargaryen();
+									targaryen->toString();
 									creaT=1;
 								}
 								break;
@@ -137,7 +137,7 @@ int main(int argc, char const *argv[])
 								else{
 									DRAG=newDrag();
 									DRAG->toString();
-									readEjercitoTargaryen(ejercitoTaegaryen,10,cont_DRAG);
+									readEjercitoTargaryen(ejercitoTargaryen,10,cont_DRAG);
 									cont_DRAG++;
 								}
 								break;
@@ -169,7 +169,7 @@ int main(int argc, char const *argv[])
 								cout<<endl;
 								for (int i = 0; i < 10; ++i)
 								{
-									ejercitoTaegaryen[i]->toString();
+									ejercitoTargaryen[i]->toString();
 								}
 								break;
 						}
@@ -188,7 +188,7 @@ int main(int argc, char const *argv[])
 			delete PFN;
 			delete lannister;
 			//delete GR;
-			delete taegaryen;
+			delete targaryen;
 			delete DRAG;
 			cout<<"Saliendo"<<endl;
 				break;
@@ -314,7 +314,7 @@ Pequenia_Familia_Noble** inicializarStark(int size){//inicio inicializar
 
 //LANNISTER
 
-Starks* newLannister(){
+Lannister* newLannister(){
 	string jefe_familia, animal_emblema, lema, fuerza_montania;
 	int cant_dinero, cant_integranes;
 	Lannister* lannister;

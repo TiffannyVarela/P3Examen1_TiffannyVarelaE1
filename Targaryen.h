@@ -16,6 +16,7 @@ class Targaryen
 	public:
 		Targaryen();
 		Targaryen(string,string,string,int);
+		string toString();
 		~Targaryen();
 	
 };

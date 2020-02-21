@@ -14,6 +14,7 @@ class Dragones
 	public:
 		Dragones();
 		Dragones(string,string,string,int,int,int);
+		string toString();
 		~Dragones();
 	
 };
