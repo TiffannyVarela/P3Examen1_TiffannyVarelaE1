@@ -15,19 +15,19 @@ int menuFamilias();
 //STARKS
 Starks* newStarks();
 Pequenia_Familia_Noble* newPFN();
-void readEjercitoStark(Pequenia_Familia_Noble**,int ,int);
+void readEjercitoStark(Pequenia_Familia_Noble**,int ,int, Pequenia_Familia_Noble*);
 Pequenia_Familia_Noble** inicializarStark(int);
 
 //LANNISTER
 Lannister* newLannister();
 Guardia_Real* newGR();
-void readEjercitoLannister(Guardia_Real**,int ,int);
+void readEjercitoLannister(Guardia_Real**,int ,int,Guardia_Real*);
 Guardia_Real** inicializarLannister(int);
 
 //TARGARYEN
 Targaryen* newTargaryen();
 Dragones* newDrag();
-void readEjercitoTargaryen(Dragones**,int ,int);
+void readEjercitoTargaryen(Dragones**,int ,int,Dragones*);
 Dragones** inicializarTargaryen(int);
 
 int main(int argc, char const *argv[])
@@ -111,7 +111,7 @@ int main(int argc, char const *argv[])
 								else{
 									PFN=newPFN();
 									PFN->toString();
-									readEjercitoStark(ejercitoStark,10,cont_PFN);
+									readEjercitoStark(ejercitoStark,10,cont_PFN,PFN);
 									cont_PFN++;
 								}
 								break;
@@ -123,8 +123,8 @@ int main(int argc, char const *argv[])
 								}
 								else{
 									GR=newGR();
-									GR->toString();
-									readEjercitoLannister(ejercitoLannister,10,cont_GR);
+									GR->toString();	
+									readEjercitoLannister(ejercitoLannister,10,cont_GR,GR);
 									cont_GR++;
 								}
 								break;
@@ -137,7 +137,7 @@ int main(int argc, char const *argv[])
 								else{
 									DRAG=newDrag();
 									DRAG->toString();
-									readEjercitoTargaryen(ejercitoTargaryen,10,cont_DRAG);
+									readEjercitoTargaryen(ejercitoTargaryen,10,cont_DRAG,DRAG);
 									cont_DRAG++;
 								}
 								break;
@@ -294,13 +294,14 @@ Pequenia_Familia_Noble* newPFN(){
 	return PFN;
 }
 
-void readEjercitoStark(Pequenia_Familia_Noble** array,int size,int pos){//inicio read array
+void readEjercitoStark(Pequenia_Familia_Noble** array,int size,int pos, Pequenia_Familia_Noble* PFN){//inicio read array
 	if (pos==9)
 	{
 		cout<<"Ejercito LLeno"<<endl;
 	}
 	else{
-		for(int i=pos; i<size;i++){
+		array[pos]=PFN;
+		for(int i=pos+1; i<size;i++){
 			array[i]= new Pequenia_Familia_Noble();
 		}
 	}
@@ -334,7 +335,7 @@ Lannister* newLannister(){
 	return lannister;
 }
 
-Guardia_Real* newGR(){
+Guardia_Real* newGR(){//edicion del tipo
 	string nombre;
 	int edad, tipo,ataque,defensa;
 	Guardia_Real* GR;
@@ -348,17 +349,18 @@ Guardia_Real* newGR(){
 	cin>>ataque;
 	cout<<"Defensa: "<<endl;
 	cin>>defensa;
-	GR= new Guardia_Real(nombre,edad,tipo,ataque,defensa);
+	GR= new Guardia_Real(nombre,Guardia_Real,edad,ataque,defensa);
 	return GR;
 }
 
-void readEjercitoLannister(Guardia_Real** array,int size,int pos){//inicio read array
+void readEjercitoLannister(Guardia_Real** array,int size,int pos, Guardia_Real* GR){//inicio read array
 	if (pos==9)
 	{
 		cout<<"Ejercito LLeno"<<endl;
 	}
 	else{
-		for(int i=pos; i<size;i++){
+		array[pos]=GR;
+		for(int i=pos+1; i<size;i++){
 			array[i]= new Guardia_Real();
 		}
 	}
@@ -408,13 +410,14 @@ Dragones* newDrag(){
 	return DRAG;
 }
 
-void readEjercitoTargaryen(Dragones** array,int size,int pos){//inicio read array
+void readEjercitoTargaryen(Dragones** array,int size,int pos, Dragones* DRAG){//inicio read array
 	if (pos==9)
 	{
 		cout<<"Ejercito LLeno"<<endl;
 	}
 	else{
-		for(int i=pos; i<size;i++){
+		array[pos]=DRAG;
+		for(int i=pos+1; i<size;i++){
 			array[i]= new Dragones();
 		}
 	}
@@ -424,3 +427,5 @@ Dragones** inicializarTargaryen(int size){//inicio inicializar
 	Dragones** retval = new Dragones*[size];
 	return retval;
 }//fin inicializar
+
+//SIMULACION
