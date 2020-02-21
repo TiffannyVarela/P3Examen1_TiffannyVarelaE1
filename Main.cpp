@@ -97,7 +97,7 @@ int main(int argc, char const *argv[])
 								}
 								break;
 						}
-
+						opcFam=0;
 						break;
 
 					case 2:
@@ -142,11 +142,38 @@ int main(int argc, char const *argv[])
 								}
 								break;
 						}
-
+						opcFam=0;
 						break;
 
 					case 3:
 						//listar
+						switch(opcFam=menuFamilias()){
+
+							case 1:
+								cout<<endl;
+								for (int i = 0; i < 10; ++i)
+								{
+									ejercitoStark[i]->toString();
+								}
+								break;
+
+							case 2:
+								cout<<endl;
+								for (int i = 0; i < 10; ++i)
+								{
+									ejercitoLannister[i]->toString();
+								}
+								break;
+
+							case 3:
+								cout<<endl;
+								for (int i = 0; i < 10; ++i)
+								{
+									ejercitoTaegaryen[i]->toString();
+								}
+								break;
+						}
+						opcFam=0;
 						break;
 				}
 
@@ -159,6 +186,10 @@ int main(int argc, char const *argv[])
 			case 3:
 			delete stark;
 			delete PFN;
+			delete lannister;
+			//delete GR;
+			delete taegaryen;
+			delete DRAG;
 			cout<<"Saliendo"<<endl;
 				break;
 
@@ -224,6 +255,9 @@ int menuFamily(){//inicio metodo menu
         return 0;
 }//fin metodo menu
 
+
+//STARKS
+
 Starks* newStarks(){
 	string jefe_familia, animal_emblema, lema;
 	int cant_lobos, cant_integranes;
@@ -274,5 +308,119 @@ void readEjercitoStark(Pequenia_Familia_Noble** array,int size,int pos){//inicio
 
 Pequenia_Familia_Noble** inicializarStark(int size){//inicio inicializar
 	Pequenia_Familia_Noble** retval = new Pequenia_Familia_Noble*[size];
+	return retval;
+}//fin inicializar
+
+
+//LANNISTER
+
+Starks* newLannister(){
+	string jefe_familia, animal_emblema, lema, fuerza_montania;
+	int cant_dinero, cant_integranes;
+	Lannister* lannister;
+	cout<<"Jefe de Familia: "<<endl;
+	cin>>jefe_familia;
+	cout<<"Animal Emblema: "<<endl;
+	cin>>animal_emblema;
+	cout<<"Lema: "<<endl;
+	cin>>lema;
+	cout<<"Fuerza de la Montania: "<<endl;
+	cin>>fuerza_montania;
+	cout<<"Cantidad de Dinero: "<<endl;
+	cin>>cant_dinero;
+	cout<<"Cantidad de Integrantes: "<<endl;
+	cin>>cant_integranes;
+	lannister = new Lannister(jefe_familia,animal_emblema,lema,fuerza_montania,cant_dinero,cant_integranes);
+	return lannister;
+}
+
+/*Pequenia_Familia_Noble* newPFN(){
+	string nombre, simbolo, lema;
+	int ataque,defensa;
+	Pequenia_Familia_Noble* PFN;
+	cout<<"Nombre: "<<endl;
+	cin>>nombre;
+	cout<<"Simbolo: "<<endl;
+	cin>>simbolo;
+	cout<<"Lema: "<<endl;
+	cin>>lema;
+	cout<<"Ataque: "<<endl;
+	cin>>ataque;
+	cout<<"Defensa: "<<endl;
+	cin>>defensa;
+	PFN= new Pequenia_Familia_Noble(nombre,simbolo,lema,ataque,defensa);
+	return PFN;
+}
+
+void readEjercitoLannister(Guardia_Real** array,int size,int pos){//inicio read array
+	if (pos==9)
+	{
+		cout<<"Ejercito LLeno"<<endl;
+	}
+	else{
+		for(int i=pos; i<size;i++){
+			array[i]= new Guardia_Real();
+		}
+	}
+}//fin read array
+
+Guardia_Real** inicializarStark(int size){//inicio inicializar
+	Guardia_Real** retval = new Guardia_Real*[size];
+	return retval;
+}//fin inicializar*/
+
+//TARGARYEN
+
+
+Targaryen* newTargaryen(){
+	string reina, animal_emblema, lema;
+	int cant_barcos;
+	Targaryen* targaryen;
+	cout<<"Reina: "<<endl;
+	cin>>reina;
+	cout<<"Animal Emblema: "<<endl;
+	cin>>animal_emblema;
+	cout<<"Lema: "<<endl;
+	cin>>lema;
+	cout<<"Cantidad de Barcos: "<<endl;
+	cin>>cant_barcos;
+	targaryen = new Targaryen(reina,animal_emblema,lema,cant_barcos);
+	return targaryen;
+}
+
+Dragones* newDrag(){
+	string nombre, color, tamanio;
+	int distancia_fuego,ataque,defensa;
+	Dragones* DRAG;
+	cout<<"Nombre: "<<endl;
+	cin>>nombre;
+	cout<<"Color: "<<endl;
+	cin>>color;
+	cout<<"Tamanio: "<<endl;
+	cin>>tamanio;
+	cout<<"Distancia de Fuego: "<<endl;
+	cin>>distancia_fuego;
+	cout<<"Ataque: "<<endl;
+	cin>>ataque;
+	cout<<"Defensa: "<<endl;
+	cin>>defensa;
+	DRAG= new Dragones(nombre,color,tamanio,distancia_fuego,ataque,defensa);
+	return DRAG;
+}
+
+void readEjercitoTargaryen(Dragones** array,int size,int pos){//inicio read array
+	if (pos==9)
+	{
+		cout<<"Ejercito LLeno"<<endl;
+	}
+	else{
+		for(int i=pos; i<size;i++){
+			array[i]= new Dragones();
+		}
+	}
+}//fin read array
+
+Dragones** inicializarTaegaryen(int size){//inicio inicializar
+	Dragones** retval = new Dragones*[size];
 	return retval;
 }//fin inicializar

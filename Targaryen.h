@@ -10,12 +10,12 @@ using namespace std;
 class Targaryen
 {
 	private:
-		string jefe_familia, animal_emblema, lema;
-		int cant_lobos, cant_integranes;
+		string reina, animal_emblema, lema;
+		int cant_barcos;
 		//Dragones* ejercito;
 	public:
 		Targaryen();
-		Targaryen(string,string,string,int,int);
+		Targaryen(string,string,string,int);
 		~Targaryen();
 	
 };

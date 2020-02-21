@@ -16,6 +16,7 @@ class Lannister
 	public:
 		Lannister();
 		Lannister(string,string,string,string,int,int);
+		string toString();
 		~Lannister();
 	
 };

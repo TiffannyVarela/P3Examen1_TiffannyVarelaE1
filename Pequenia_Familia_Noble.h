@@ -10,7 +10,7 @@ class Pequenia_Familia_Noble
 {
 	private:
 		string nombre, simbolo, lema;
-		int ataque,defensa;
+		friend int ataque,defensa;
 	public:
 		Pequenia_Familia_Noble();
 		Pequenia_Familia_Noble(string,string,string,int,int);
