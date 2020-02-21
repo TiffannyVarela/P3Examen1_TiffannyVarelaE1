@@ -12,7 +12,7 @@ class Lannister
 	private:
 		string jefe_familia, animal_emblema, lema,fuerza_montania;
 		int cant_dinero, cant_integranes;
-		//Guardia_Real* ejercito;
+		friend void Simulacion(Pequenia_Familia_Noble**, Guardia_Real**, Dragones**, int, int, int);
 	public:
 		Lannister();
 		Lannister(string,string,string,string,int,int);

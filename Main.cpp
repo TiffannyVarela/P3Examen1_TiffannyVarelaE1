@@ -30,6 +30,8 @@ Dragones* newDrag();
 void readEjercitoTargaryen(Dragones**,int ,int,Dragones*);
 Dragones** inicializarTargaryen(int);
 
+void Simulacion(Pequenia_Familia_Noble**, Guardia_Real**, Dragones**, int, int, int);
+
 int main(int argc, char const *argv[])
 {
 	int creaS=-1, creaL=-1,creaT=-1;
@@ -444,7 +446,7 @@ Dragones** inicializarTargaryen(int size){//inicio inicializar
 void Simulacion(Pequenia_Familia_Noble** stark, Guardia_Real** lannister, Dragones** targaryen, int cont_PFN, int cont_GR, int cont_DRAG){
 	int opc1, opc2;
 	int s=0,l=0,t=0;
-	int 
+	int prom1, prom2; 
 	cout<<"Elija la Primera Familia: ";
 	opc1=menuFamilias();
 	if (opc1==1 && cont_PFN!=0)
@@ -483,7 +485,7 @@ void Simulacion(Pequenia_Familia_Noble** stark, Guardia_Real** lannister, Dragon
 		cout<<"Iniciando"<<endl;
 		if (s==1 && l==1)
 		{
-			/* code */
+			
 		}
 		if (s==1 && t==1)
 		{
