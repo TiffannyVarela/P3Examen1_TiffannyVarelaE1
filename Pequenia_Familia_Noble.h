@@ -14,6 +14,7 @@ class Pequenia_Familia_Noble
 	public:
 		Pequenia_Familia_Noble();
 		Pequenia_Familia_Noble(string,string,string,int,int);
+		string toString();
 		~Pequenia_Familia_Noble();
 	
 };

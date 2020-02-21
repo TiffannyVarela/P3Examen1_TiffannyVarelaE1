@@ -10,7 +10,6 @@ Starks::Starks(){
 	string lema=" ";
 	int cant_lobos=0;
 	int cant_integranes=0;
-	Pequenia_Familia_Noble** ejercito = NULL;
 }
 
 Starks::Starks(string jefe_familia, string animal_emblema, string lema, int cant_lobos, int cant_integranes){
@@ -19,7 +18,6 @@ Starks::Starks(string jefe_familia, string animal_emblema, string lema, int cant
 	this -> lema=lema;
 	this -> cant_integranes=cant_integranes;
 	this -> cant_lobos=cant_lobos;
-	ejercito=inicializar(10);
 }
 
 string Starks::toString(){
@@ -36,11 +34,6 @@ string Starks::toString(){
 	}
 	return "";
 }
-
-Pequenia_Familia_Noble** Starks::inicializar(int size){//inicio inicializar
-	Pequenia_Familia_Noble** retval = new Pequenia_Familia_Noble*[size];
-	return retval;
-}//fin inicializar
 
 Starks::~Starks(){
 	cout<<"Starks Eliminados"<<endl;

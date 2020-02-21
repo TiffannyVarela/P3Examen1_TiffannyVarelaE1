@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include "Pequenia_Familia_Noble.h"
 using namespace std;
 
 Pequenia_Familia_Noble::Pequenia_Familia_Noble(){
@@ -7,14 +8,14 @@ Pequenia_Familia_Noble::Pequenia_Familia_Noble(){
 	string simbolo=" "; 
 	string lema=" ";
 	int ataque=0;
-	int defeansa=0;
+	int defensa=0;
 }
 
-Pequenia_Familia_Noble::Pequenia_Familia_Noble(string nombre, string simbolo, string lema, int ataque, int defeansa){
+Pequenia_Familia_Noble::Pequenia_Familia_Noble(string nombre, string simbolo, string lema, int ataque, int defensa){
 	this -> nombre=nombre;
 	this -> simbolo=simbolo;
 	this -> lema=lema;
-	this -> defeansa=defeansa;
+	this -> defensa=defensa;
 	this -> ataque=ataque;
 }
 
@@ -28,7 +29,7 @@ string Pequenia_Familia_Noble::toString(){
 		<<"Simbolo: "<<simbolo<<endl
 		<<"Lema: "<<lema<<endl
 		<<"Ataque: "<<ataque<<endl
-		<<"Defensa: "<<defeansa<<endl;
+		<<"Defensa: "<<defensa<<endl;
 	}
 	return "";
 }
