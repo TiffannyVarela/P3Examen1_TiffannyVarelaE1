@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include "Lannister.h"
-#include "Guardia_Real.h"
 using namespace std;
 
 Lannister::Lannister(){

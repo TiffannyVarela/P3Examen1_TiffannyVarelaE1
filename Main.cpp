@@ -30,7 +30,7 @@ Dragones* newDrag();
 void readEjercitoTargaryen(Dragones**,int ,int,Dragones*);
 Dragones** inicializarTargaryen(int);
 
-void Simulacion(Pequenia_Familia_Noble**, Guardia_Real**, Dragones**, int, int, int);
+void Simulacion(/*Pequenia_Familia_Noble**, Guardia_Real**, Dragones**, */int, int, int);
 
 int main(int argc, char const *argv[])
 {
@@ -153,25 +153,31 @@ int main(int argc, char const *argv[])
 
 							case 1:
 								cout<<endl;
+								cout<<"Ejercito Starks"<<endl;
 								for (int i = 0; i < 10; ++i)
 								{
 									ejercitoStark[i]->toString();
+									cout<<endl;
 								}
 								break;
 
 							case 2:
 								cout<<endl;
+								cout<<"Ejercito Lannister"<<endl;
 								for (int i = 0; i < 10; ++i)
 								{
 									ejercitoLannister[i]->toString();
+									cout<<endl;
 								}
 								break;
 
 							case 3:
 								cout<<endl;
+								cout<<"Ejercito Targaryen"<<endl;
 								for (int i = 0; i < 10; ++i)
 								{
 									ejercitoTargaryen[i]->toString();
+									cout<<endl;
 								}
 								break;
 						}
@@ -443,7 +449,7 @@ Dragones** inicializarTargaryen(int size){//inicio inicializar
 
 //SIMULACION
 
-void Simulacion(Pequenia_Familia_Noble** stark, Guardia_Real** lannister, Dragones** targaryen, int cont_PFN, int cont_GR, int cont_DRAG){
+void Simulacion(/*Pequenia_Familia_Noble** stark, Guardia_Real** lannister, Dragones** targaryen, */int cont_PFN, int cont_GR, int cont_DRAG){
 	int opc1, opc2;
 	int s=0,l=0,t=0;
 	int prom1, prom2; 

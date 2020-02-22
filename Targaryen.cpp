@@ -1,7 +1,6 @@
 #include <iostream>
 #include <string>
 #include "Targaryen.h"
-#include "Dragones.h"
 using namespace std;
 
 Targaryen::Targaryen(){
