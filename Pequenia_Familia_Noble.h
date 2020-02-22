@@ -12,7 +12,7 @@ class Pequenia_Familia_Noble
 	private:
 		string nombre, simbolo, lema;
 		int ataque,defensa;
-		friend void SimulacionP(Pequenia_Familia_Noble*, int, int);
+		friend void SimulacionP();
 	public:
 		Pequenia_Familia_Noble();
 		Pequenia_Familia_Noble(string,string,string,int,int);

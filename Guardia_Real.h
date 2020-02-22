@@ -12,7 +12,7 @@ class Guardia_Real
 	private:
 		string nombre;
 		int tipo,edad,ataque,defensa;
-		friend void SimulacionG(Guardia_Real*, int, int);
+		friend void SimulacionG();
 	public:
 		static const int Caballero=1;
 		static const int Jinete=2;

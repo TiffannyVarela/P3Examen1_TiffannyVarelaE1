@@ -11,7 +11,7 @@ class Dragones
 	private:
 		string nombre, color, tamanio;
 		int distancia_fuego, ataque, defensa;
-		friend void SimulacionD(Dragones*, int, int);
+		friend void SimulacionD();
 	public:
 		Dragones();
 		Dragones(string,string,string,int,int,int);

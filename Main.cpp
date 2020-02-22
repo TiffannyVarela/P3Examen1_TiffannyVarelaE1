@@ -32,6 +32,11 @@ Dragones** inicializarTargaryen(int);
 
 void Simulacion(/*Pequenia_Familia_Noble**, Guardia_Real**, Dragones**, */int, int, int);
 
+//int cont_PFN=0,cont_GR=0, cont_DRAG=0;
+//Pequenia_Familia_Noble** ejercitoStark=inicializarStark(10);
+//Guardia_Real** ejercitoLannister=inicializarLannister(10);
+//Dragones** ejercitoTargaryen=inicializarTargaryen(10);
+
 int main(int argc, char const *argv[])
 {
 	int creaS=-1, creaL=-1,creaT=-1;
@@ -449,10 +454,10 @@ Dragones** inicializarTargaryen(int size){//inicio inicializar
 
 //SIMULACION
 
-void Simulacion(/*Pequenia_Familia_Noble** stark, Guardia_Real** lannister, Dragones** targaryen, */int cont_PFN, int cont_GR, int cont_DRAG){
-	int opc1, opc2;
+/*void Simulacion(/*Pequenia_Familia_Noble** stark, Guardia_Real** lannister, Dragones** targaryen, int cont_PFN, int cont_GR, int cont_DRAG){
+	/*int opc1, opc2;
 	int s=0,l=0,t=0;
-	int prom1, prom2; 
+	int atac1, atac2, def1, def2;
 	cout<<"Elija la Primera Familia: ";
 	opc1=menuFamilias();
 	if (opc1==1 && cont_PFN!=0)
@@ -491,16 +496,20 @@ void Simulacion(/*Pequenia_Familia_Noble** stark, Guardia_Real** lannister, Drag
 		cout<<"Iniciando"<<endl;
 		if (s==1 && l==1)
 		{
-			
+			for (int i = 0; i < 10; ++i)
+			{
+				atac1+=ejercitoStark[i].ataque;
+			}
+			cout<<"Atac "<<atac1<<endl;
 		}
 		if (s==1 && t==1)
 		{
-			/* code */
+
 		}
 		if (t==1 && l==1)
 		{
-			/* code */
+
 		}
 	}
 
-}
+}*/
